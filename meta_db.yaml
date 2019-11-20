@@ -1,0 +1,27 @@
+WARPFIELD_core:
+  reposity: https://astronomer-observer@bitbucket.org/drahner/warpfield.git
+  dependencies : None
+  public : True
+  options : []
+  pythonv : 2.*
+
+WARPFIELD_EMP:
+  reposity: https://github.com/EricPell/warpfield_emp.git
+  dependencies : []
+  public : False
+  options : []
+  pythonv : 3.*
+
+WARPFIELD_EMP_VIEWER:
+  reposity: https://github.com/EricPell/WARPFIELD_EMP_VIEWER.git
+  dependencies : [WARPFIELD_EMP]
+  python_depends: []
+  public : False
+  options : []
+  pythonv : 3.*
+
+WARPFIELD_EMP_pubData:
+  reposity: None
+  dependencies : None
+  public : False
+  options : []
