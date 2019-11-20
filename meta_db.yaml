@@ -12,6 +12,13 @@ WARPFIELD_EMP:
   options : []
   pythonv : 3.*
 
+WARPFIELD_EMP_POP:
+  reposity: https://github.com/EricPell/warpfield_emp_pop.git
+  dependencies : [WARPFIELD_EMP]
+  public : False
+  options : []
+  pythonv : 3.*
+
 WARPFIELD_EMP_VIEWER:
   reposity: https://github.com/EricPell/WARPFIELD_EMP_VIEWER.git
   dependencies : [WARPFIELD_EMP]
@@ -19,6 +26,7 @@ WARPFIELD_EMP_VIEWER:
   public : False
   options : []
   pythonv : 3.*
+  warpfield_environ_variables : [WARPFIELD_EMP_DEBUG, WARPFIELD_EMP_PROJECT, WARPFIELD_EMP_DATA_PATH, WARPFIELD_EMP_DEFAULT_TABLE]
 
 WARPFIELD_EMP_pubData:
   reposity: None
