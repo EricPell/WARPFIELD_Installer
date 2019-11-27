@@ -7,10 +7,10 @@ if [[ $PWD == *"WARPFIELD_Installer"* ]]; then
     echo -e "Do not install WARPFIELD packages here."
     echo -e "Go to the directory where you will install warpfield packes, and rerun this script"
 else
-    # git clone https://github.com/EricPell/warpfield_core
-    # git clone https://github.com/EricPell/warpfield_emp
-    # git clone https://github.com/EricPell/warpfield_emp_viewer
-    # pip3 install pyqt5, astropy
+    git clone https://github.com/EricPell/warpfield_core
+    git clone https://github.com/EricPell/warpfield_emp
+    git clone https://github.com/EricPell/warpfield_emp_viewer
+    pip3 install -I pyqt5, astropy
 
     echo "export WARPFIELD_CORE=$PWD/warpfield_core/" > ~/.warpfield_init.sh
     echo "export WARPFIELD_EMP_DEBUG=False" >> ~/.warpfield_init.sh
