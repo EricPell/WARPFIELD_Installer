@@ -24,8 +24,12 @@ echo "creating alias"
 echo "alias warpfield_gui=\"python3 $PWD/warpfield_emp_viewer/WARPEMP_VIEWER_v${VERSION}.py\"" >> $HOME/.warpfield_init.sh
 alias warpfield_gui="python3 $PWD/warpfield_emp_viewer/WARPEMP_VIEWER_v${VERSION}.py"
 
-echo -e "\n#The following line was added by the WARPFIELD Installer script" >> $HOME/.bashrc
-echo -e "source ~/.warpfield_init.sh\n" >> $HOME/.bashrc
+if grep -q "source ~/.warpfield_init.sh" $HOME/.bashrc; then
+    echo "Updating .warpfield_init.sh"
+else
+    echo -e "\n#The following line was added by the WARPFIELD Installer script" >> $HOME/.bashrc
+    echo -e "source ~/.warpfield_init.sh\n" >> $HOME/.bashrc
+    echo "Updating .bashrc and .warpfield_init.sh..."
 
 echo -e "\n\n Installation finished.\nYou can now run the WARPFIELD Viewer and Population synthesis GUI"
 echo "To Run type: warpfield_gui"
